@@ -2,8 +2,7 @@ package com.company.entity.cashiers;
 
 import com.company.entity.Cashier;
 import com.company.entity.CashierStrategy;
-import com.company.entity.RandomizedHuman;
-import com.company.entity.cashiers.Errors.CashierDied;
+import com.company.entity.Errors.CashierDied;
 import com.company.entity.customers.NormalCustomer;
 import com.company.entity.strategies.DullStrategy;
 import com.company.entity.strategies.FriendlyStrategy;

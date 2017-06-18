@@ -1,6 +1,6 @@
 package com.company.entity;
 
-import com.company.entity.cashiers.Errors.CashierDied;
+import com.company.entity.Errors.CashierDied;
 
 import java.util.Random;
 

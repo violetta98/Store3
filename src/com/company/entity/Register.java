@@ -3,7 +3,7 @@ package com.company.entity;
 import com.company.entity.CashMachine.RandomizedCashMachine;
 import com.company.entity.Exceptions.CashMachineCrashed;
 import com.company.entity.Exceptions.PaperRanOut;
-import com.company.entity.cashiers.Errors.CashierDied;
+import com.company.entity.Errors.CashierDied;
 
 import java.util.LinkedList;
 import java.util.Queue;

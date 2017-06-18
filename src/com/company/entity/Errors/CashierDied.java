@@ -1,4 +1,4 @@
-package com.company.entity.cashiers.Errors;
+package com.company.entity.Errors;
 
 /**
  * Created by Violetta on 19-06-2017.
