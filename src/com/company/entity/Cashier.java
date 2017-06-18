@@ -1,5 +1,6 @@
 package com.company.entity;
 
-public interface Cashier {
-    CashierStrategy strategy(Class customerClass);
+public abstract class Cashier extends RandomizedHuman {
+    public abstract CashierStrategy strategy(Class customerClass) // ленивый кассир всегда использует скучную стратегию
+    ;
 }

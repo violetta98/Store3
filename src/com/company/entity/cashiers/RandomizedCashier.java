@@ -10,8 +10,7 @@ import java.util.Random;
 /**
  * Created by Hillel6 on 08.06.2017.
  */
-public class RandomizedCashier extends RandomizedHuman implements Cashier {
-
+public class RandomizedCashier extends Cashier {
     @Override
     public CashierStrategy strategy(Class customerClass) {
         return null;
