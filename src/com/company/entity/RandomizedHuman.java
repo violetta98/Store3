@@ -10,9 +10,4 @@ public class RandomizedHuman {
     protected int randomAction() {
         return random.nextInt(15);
     }
-    public void die() throws CashierDied {
-        died = new Random().nextBoolean();
-        if (died)
-            throw new CashierDied("Cashier died!");
-    }
 }
