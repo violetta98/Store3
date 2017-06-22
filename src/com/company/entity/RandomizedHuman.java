@@ -1,7 +1,5 @@
 package com.company.entity;
 
-import com.company.entity.Errors.CashierDied;
-
 import java.util.Random;
 
 public class RandomizedHuman {

@@ -2,7 +2,7 @@ package com.company.entity.cashiers;
 
 import com.company.entity.Cashier;
 import com.company.entity.CashierStrategy;
-import com.company.entity.Errors.CashierDied;
+import com.company.entity.RuntimeExceptions.CashierDied;
 import com.company.entity.strategies.DullStrategy;
 
 public class LazyCashier extends Cashier {

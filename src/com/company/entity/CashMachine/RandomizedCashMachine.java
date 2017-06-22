@@ -15,11 +15,20 @@ public class RandomizedCashMachine {
     public void crash() throws CashMachineCrashed {
         crashing = (new Random()).nextBoolean();
         if (crashing)
-            throw new CashMachineCrashed("Opps... Cash Machine was broken... Repairmen have already left for us.");
+            throw new CashMachineCrashed();
     }
     public void paperRanOut() throws PaperRanOut {
         varPaperRanOut = (new Random()).nextBoolean();
         if (varPaperRanOut)
-            throw new PaperRanOut("Opps... Paper ran out :(");
+            throw new PaperRanOut();
+    }
+    public int beepThings() throws CashMachineCrashed {
+        crash();
+        return new Random().nextInt(20);
+    }
+    public int printCheque() throws CashMachineCrashed, PaperRanOut {
+        crash();
+        paperRanOut();
+        return new Random().nextInt(5);
     }
 }

@@ -3,7 +3,7 @@ package com.company.entity;
 import com.company.entity.CashMachine.RandomizedCashMachine;
 import com.company.entity.Exceptions.CashMachineCrashed;
 import com.company.entity.Exceptions.PaperRanOut;
-import com.company.entity.Errors.CashierDied;
+import com.company.entity.RuntimeExceptions.CashierDied;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -26,22 +26,20 @@ public class Register implements Runnable {
         Customer customer;
         while((customer=queue.poll())!=null) { // ctrl + q
             try {
-                rcm.crash();
-                rcm.paperRanOut();
                 cashier.die();
                 CashierStrategy strategy = cashier.strategy(customer.getClass()); // кассир выбирает стратегию, в зависимости от того, какой покупатель стоит перед ним
-                totalTime += strategy.communicate(customer); // и применяет эту стратегию, то есть общается с покупателем
+                totalTime += strategy.communicate(customer, rcm); // и применяет эту стратегию, то есть общается с покупателем
             }
-            catch (CashMachineCrashed ex) {
-                ex.sout();
+            catch (CashMachineCrashed e) {
+                System.out.println(e.getMessage());
                 cashMashineCrash++;
             }
-            catch (PaperRanOut ex) {
-                ex.sout();
+            catch (PaperRanOut e) {
+                System.out.println(e.getMessage());
                 paperRO++;
             }
-            catch(CashierDied er) {
-                er.sout();
+            catch(CashierDied e) {
+                System.out.println(e.getMessage());
                 break;
             }
             finally {
